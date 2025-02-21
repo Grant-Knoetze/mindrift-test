@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Google site verification-->
+    <meta name="google-site-verification" content="ZNGAVpLH57ubR17YFkS1kr9uWstVE5-tEmb0eAVlEX0" />
+    <!--End Google site verification-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NSLWXR2R');</script>
+    <!-- End Google Tag Manager -->
+     <!--Google Tag Manager-->
+    <!--Google Adsense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4126413092594705"
+    crossorigin="anonymous"></script>
+     <!--End Google Adsense-->
+    <title>Advanced Red Teaming - Attack</title>
+    <meta http-equiv="x-ua-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Apple Developer and Safari Webkits-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!--Apple Developer and Safari Webkits End-->
+    <meta name="description"
+        content="This is my professional blog.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="mdb.min.css" />-->
+    <!-- Custom styles -->
+    <!--<link rel="stylesheet" href="style.css" />-->
+</head>
+
+<body>
+        <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSLWXR2R"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!--Main Navigation-->
+    <header>
+        <!-- Intro settings -->
+        <style>
+            #intro {
+                /* Margin to fix overlapping fixed navbar */
+                margin-top: 58px;
+            }
+
+            @media (max-width: 991px) {
+                #intro {
+                    /* Margin to fix overlapping fixed navbar */
+                    margin-top: 45px;
+                }
+            }
+        </style>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <!--Container wrapper-->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!--Left links-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Advanced Red Teaming - APT and Adversary Emulation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="phishing.html">Phishing Techniques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="initial_access.html">Initial Access Techniques</a>
+                        </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="purple_team_cyber_range.html">Purple Team Cyber Range</a>
+                        </li>-->
+                         <li class="nav-item">
+                            <a class="nav-link" href="maintaining_persistence.html">Maintaining Persistence</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="defense_evasion.html">Defense Evasion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="incident_response_pshell_hunting.html">Incident Response - PowerShell Hunting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="incident_response_detecting_malicious_documents_with_sysmon.html">Incident Response - Detecting Malicious Documents With Sysmon</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mirt_basic_static_analysis.html">Malware Incident Response - Basic Static Analysis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="memory_forensics.html">Incident Response - Memory Forensics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index_base64.html">Base 64 Encoder/Decoder</a>
+                        </li>
+                    </ul>
+                    <!--Left links-->
+                </div>
+                <!-- Collapsible wrapper -->
+        </nav>
+        <!-- Navbar -->
+        
+        <div id="intro" class="p-5 text-center bg-light">
+
+            <h1 class="display-5">Advanced Red Teaming - APT and Adversary Emulation</h1>
+
+        </div>
+        <!-- Jumbotron -->
+    </header>
+    <!--Main Navigation-->
+    <!--Main layout-->
+
+    <main class="mt-4 mb-5">
+        <div class="container">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-md-8 mb-4">
+                    <!--Section: Post mdb-->
+                    <section class="border-bottom mb-4">
+                        <!---- <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg" class="img-fluid shadow-2-strong rounded mb-4" alt="" /> -->
+
+                        <div class="row align-items-center mb-4">
+                            <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
+                                <img src="IMG-9879-copy-2.webp" class="rounded shadow-1-strong me-2" height="35" alt=""
+                                    loading="lazy" loading="lazy" />
+                         <span><strong>Blog by: Grant Knoetze</strong> </span>
+                        </div>
+                         <div class="Intro">
+
+                                <p> Welcome to my blog. I am a cybersecurity analyst 
+                                    and instructor.
+                                    I have a special interest in Digital Forensics and Incident Response (DFIR), and I have 
+                                    been involved with the training of international 
+                                    cybersecurity and DFIR students through my full time job
+                                    , but also for a US based organization focused on DFIR 
+                                    instruction for law enforcement officers. I am also a freelance IT and cybersecurity writer. </p>
+                                    <p>
+                                        In addition to red teaming, I have been trained 
+                                    in DFIR and incident response, as well as malware
+                                    incident response.
+                                    </p><p>
+                                    I currently teach programs in Python, PowerShell,
+                                    Linux and Windows administration, including centralized
+                                    management, as well as networking basics and network
+                                    forensics.
+                                    <p></p>
+                                    This space is in no way complete, but hopefully these few posts will
+                                    help the reader, and as I progress, keep on the look out for more posts.</p>
+                                    <p>
+                                    Please click on the buttons at the top and
+                                    bottom of this page to connect with me on 
+                                    LinkedIn, Twitter, and GitHub. </p>
+                                    <p>
+                                    If you are interested in what I am working with in digital forensics
+                                    and network forensics, please visit   <a href="https://www.digitalinvestigations.pro">Digital Investigations Pro</a>.
+
+                                    </p>
+                                    <p>If you are interested in signing up to Digital Investigations Pro, please use my affiliate link <a href="https://digitalinvestigations.pro/instantaccess?am_id=grant914">Digital Investigations Pro Become a Member</a>.</p>
+                                    <p>
+                                    If you are interested in my other work, please visit <a href="https://www.maltrak.com">Maltrak</a>, and <a href="https://www.thirdoption.ai">The Third Option</a>.
+                                    </p>
+                                    <p>
+                                        Please take a look at my IT Pro Today contributor page here <a href="https://www.itprotoday.com/author/Grant-Knoetze">Grant Knoetze Contributor Page IT Pro Today</a>.
+                                            </p>
+                                    <p>
+                                        <p>
+                                            My Hack in The Box 2023 speaker profile is here  <a href="https://conference.hitb.org/hitbsecconf2023hkt/speaker/grant-knoetze/">Grant Knoetze Hack in the Box Speaker Profile.</a>.
+                                        </p>
+                                        Check out my Linux tutorials on IT Pro Today YouTube here <a href="https://www.youtube.com/watch?v=mtY4cExA4L0&list=PLm2jsZMpxQpA1-FTUOSLls7fpV5oXIIV0">Grant Knoetze IT Pro Today Linux Tutorials</a>.
+                                            </p>      
+                                        </p>
+                                    For tech tips, and help troubleshooting IT issues, please visit my YouTube channel <a href="https://www.youtube.com/channel/UCU707wKy0uk_Firs_1S3WwQ">Grant Knoetze</a>.
+                                        </p>
+                                </p></div>
+                                
+                                <!---- <a href="" class="text-dark">Grant Knoetze</a> -->
+                           
+                    </section>
+                    <!--Section: Post mdb-->
+
+                    <!--Section: Text-->
+                    <section>
+                        <div class="Introduction">
+                            <h2 class="display-6"> Using Terraform to Automate a Red Team Infrastructure Build
+                                Inside a Cloud Based Virtual Machine</h2>
+                            <p class="lead">We will be using Terraform, an infrastructure as a code service, directly
+                                from the command line (cmd on Windows 10 in my case) on our local machine (host or VM),
+                                to to automate our red team infrastructure build in an Amazon
+                                Web Services (AWS) Linux virtual machine. This infrastructure can be easily built and
+                                destroyed from the command line using Terraform. In our AWS virtual private cloud (VPC),
+                                we will create a Linux EC2 virtual machine instance,
+                                which will host our entire infrastructure (Caldera-C2, Evilginx2, Gophish, and Socat
+                                redirector). This is achieved by utilizing a Hashicorp Configuration Language (HCL)
+                                file, that is run directly from our command line (the
+                                Terraform CLI has to be installed from the Terraform website). Using this method we can
+                                simplify our infrastructure build, saving us time, streamlining the process, and setting
+                                ourselves up for version control of our code
+                                as necessary. The HCL file can be edited using the code editor of your choice, and
+                                tracked for version control using the version control system (VCS) of your choice. Using
+                                infrastructure as a code in this way is an elegant
+                                and efficient way of managing your red team infrastructure.
+
+                            <p class="lead">I have created a local folder for each of my phishing domains that I have
+                                registered in AWS using Route-53, with the zone-id variable in the HCL file set to the
+                                zone-id that has been assigned to that domain in AWS Route-53. These
+                                HCL files will can be managed using a version control system (GitHub in my case), which
+                                makes it easy to keep track of changes to the infrastructure, as well as to branch and
+                                modify the file for use in different phishing
+                                domains.
+                            </p>
+                            <h2 class="display-6">What Is Terraform?</h2>
+                            <p class="lead">
+                                Terraform is an open-source, infrastructure as code software tool, that provides a
+                                consistent command line interface workflow to manage multiple cloud services. Terraform
+                                codifies cloud APIs into declarative configuration files. You use it directly
+                                from your command line on your machine to automate your cloud infrastructure builds.</p>
+                        
+                            <a href="https://www.terraform.io/">Terraform</a>
+                        </div>
+                        <div class="Cloud provider as hosting for command and control server">
+                            <h2 class="display-6">Why Use The Cloud?</h2>
+                            <p class="lead">
+                                The cloud provides us with the optimal platform in terms of reliability for hosting our
+                                command and control server, along with the rest of our infrastructure. All the
+                                infrastructure required for registering domains and configuration of DNS records for
+                                our use is readily available using AWS Route-53. The cloud provider IP addresses
+                                associated with the red team infrastructure VM are trusted because they are associated
+                                with AWS, and are not likely to raise suspicion. If
+                                internal IDS/IPS (Intrusion Detection System / Intrusion Prevention System), or an
+                                actual human performs a DNS lookup, an AWS IP address range will be returned. It is
+                                common for most modern enterprises to utilise a cloud
+                                service provider to host services and applications, as well as for databases. The
+                                services and applications that we interact with on a daily basis are hosted mostly, if
+                                not completely, on one of the available cloud service
+                                providers (this may be a hybrid cloud - combination of site based and cloud based
+                                services). As a red team service provider, we are no different, and using the cloud to
+                                host our infrastructure in this manner is a best practice.
+                                Using a cloud service provider ensures that our command and control server is ready at
+                                all times to receive a connection when a target is successfully exploited and begins
+                                beaconing. Public IP addresses associated with
+                                the VPC instance are re-created every time the VM is destroyed and re-created (the
+                                process is straightforward using Terraform), meaning that if the target becomes
+                                suspicious, the machine can be easily destroyed using the
+                                "terraform destroy" command, and rebuilt immediately using the "terraform plan" and
+                                "terraform apply" commands, thereby changing the public IP addresses associated with the
+                                VPC instance. The cloud also gives flexibility
+                                in terms of multiple IP addresses, and multiple machines for a bigger infrastructure. We
+                                are using AWS, but there are many other options available.
+                            </p>
+
+                            <h2 class="display-6">Configuring AWS</h2>
+                            <p class="lead">The process begins by creating an AWS account. In AWS, the infrastructure as
+                                a service virtual machine and VPC service is called EC2. here you can create a new EC2
+                                instance, and configure it to run the command and control server.
+                                We have chosen an AWS linux VM (t4g.micro) that is available on free tier, and we set up
+                                our VPC. Our Terraform HCL file will create this infrastructure when we run it from our
+                                command line. For two factor authentication
+                                of my AWS account I use a FIDO U2F zero trust security key.
+                            </p>
+                            <img src="AWS_ec2.webp" class="img-fluid" shadow-1-strong rounded mb-4 loading="lazy"
+                                style="width: 100%" alt="Snapshot of aws-ec2-dashboard" /><br></br>
+                            <p class="lead">After the EC2 VPC and Linux VM have been set up, we can use the AWS Route-53
+                                service to check for available domains for registration as our phishing domains. I have
+                                registered a fake LinkedIn domain, as well as a yourcreditInvoice.com
+                                domain for use as phishing domains in a red team engagement.
+                            </p>
+                            <div
+                                class="Modification of tf file, HCL, VC for different domains registered using cloud provider">
+                                <br>
+                                <h2 class="display-6">Modifying The HCL File Using The Hashicorp Configuration Language
+                                </h2>
+                                <p class="lead">As soon as your organization and workspace have been created inside
+                                    Terraform, they will need to be added to the HCL file, as seen in the code below:
+                                </p>
+                                <script src="https://gist.github.com/Grant-Knoetze/f31c9b966002dfe6e5b36c88c5ef8c16.js"
+                                    class="img-fluid" shadow-1-strong rounded mb-4 style="width: 100%; "></script>
+                                <p class="lead">The
+                                    <em>
+                                        phishing_zone_id variable </em>, and <em> c2_zone_id variable </em> are set to
+                                    the
+                                    zone-id configured in AWS, <br> as a domain chosen and set up as a phishing domain,
+                                    as
+                                    seen in the code
+                                    snippet below.
+                                </p>
+                                <script src="https://gist.github.com/Grant-Knoetze/c24d7714b219ae1d1dce8feebcc0553e.js"
+                                    class="img-fluid" shadow-1-strong rounded mb-4 style="width: 100%;"></script>
+                                <p class="lead">We set up our c2 domain automatically when we run the Terraform build
+                                    after
+                                    having set the necessary variables in the HCL file, as seen in the code snippet
+                                    below.
+                                    <br>
+                                </p>
+                                <script src="https://gist.github.com/Grant-Knoetze/a7c84a427566c2b2d98a9d8fe6d780bb.js"
+                                    class="img-fluid" shadow-1-strong rounded mb-4 style="width: 100%;"></script>
+                            </div>
+                            <div class="Configuring Terraform to access AWS">
+                                <h2 class="display-6">Configuring Terraform to Access AWS</h2>
+                                <p class="lead">Terraform will need to be configured to access your AWS account that has
+                                    been set up to run the red team infrastructure. To do this, an IAM user with
+                                    programmatic access will need to be created in AWS, I have named mine
+                                    "Terraform-User",
+                                    as seen below. This will create an access key ID and a secret access key. Make sure
+                                    that
+                                    the IAM user has administrator rights, and copy the API key and secret key to a safe
+                                    place.
+                                </p>
+                                <img src="Terraform_user.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    rounded loading="lazy" mb-4 style="width: 100% " alt="Snapshot of IAM User" /><br></br>
+                                <p class="lead">Once we have created the key ID and secret access key, we will need to
+                                    add
+                                    them to Terraform as variables in our workspace (Terraform variables).</p>
+                                <img src="Terraform_variables.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    loading="lazy" rounded mb-4 style="width: 100% "
+                                    alt="Snapshot of Terraform variables" /><br></br>
+                            </div>
+                            <div class="Using Terraform from the command line">
+                                <p class="lead">Once Terraform and AWS have been configured according to the above
+                                    steps,
+                                    and the Terraform CLI has been installed on our machine, we can now run the
+                                    Terraform
+                                    commands to create the infrastructure. First, change directory
+                                    into the directory where the entire red team infrastructure is located on your
+                                    machine
+                                    from the command line , and run the "terraform init" command.
+                                </p>
+                                <img src="Terraform_init.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    rounded loading="lazy" mb-4 style="width: 100%" alt="Snapshot of terraform init command
+                                                            being run from the command line" /><br></br>
+                                <p class="lead">Run the "terraform login" command, and copy and paste the login token
+                                    that
+                                    you will generate when you run this command in the command line.
+                                </p>
+
+                                <img src="Terraform_login_1.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    rounded loading="lazy" mb-4 style="width: 100%" alt="Snapshot of terraform login_1 command
+                                                            being run from the command line" /><br></br>
+                                <img src="Terraform_login_2.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    rounded loading="lazy" mb-4 style="width: 100%" alt="Snapshot of terraform login_2 command
+                                                        being run from the command line" /><br></br>
+                                <p class="lead">Run the "terraform plan" command.</p>
+                                <img src="Terraform_plan.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    rounded loading="lazy" mb-4 style="width: 100%" alt="Snapshot of terraform plan command
+                                                                being run from the command line" /><br></br>
+
+                                <p class="lead">Run the "terraform apply" command.</p>
+
+                                <img src="Terraform_apply.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    rounded loading="lazy" mb-4 style="width: 100%; " alt="Snapshot of terraform apply command
+                                                                    being run from the command line" /><br></br>
+                                <p class="lead">Your machines have now been created in AWS (Socat redirector, Gophish,
+                                    Evilginx2, Caldera-C2). Remember to run the "terraform destroy" command to delete
+                                    the
+                                    infrastructure when you are done, to avoid incurring additional cost.
+                                </p>
+
+                                <img src="Built_infrastructure_cmd.webp" class="img-fluid" class="img-fluid"
+                                    shadow-1-strong loading="lazy" rounded mb-4 style="width: 100%; "
+                                    alt="Snapshot of complete build" /><br></br>
+
+                                <p class="lead">SSH (secure shell) into your EC2 VM using your ec2_key_pair you created
+                                    earlier, and then use cat /tmp/password command to get your temporary password for
+                                    your
+                                    Caldera-C2. The username is always "red".
+                                </p>
+                                <img src="SSH_into_ec2.webp" class="img-fluid" class="img-fluid" shadow-1-strong rounded
+                                    mb-4 loading="lazy" style="width: 100%; " alt="Snapshot of ssh into Caldera-C2" /><br></br>
+
+                                <img src="Caldera_password.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    rounded loading="lazy" mb-4 style="width: 100%; "
+                                    alt="Snapshot of Caldera_password" /><br></br>
+                                <p class="lead">You can now copy and paste the Caldera-C2 IP address from your console
+                                    or
+                                    from the Terraform web-page in your workspace under the "Outputs" section, paste it
+                                    into
+                                    a browser, and login using the temporary password.
+                                </p>
+
+                                <img src="Terraform_outputs.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    loading="lazy" rounded mb-4 style="width: 100%; "
+                                    alt="Snapshot of Terraform Outputs" /><br></br>
+
+
+                                <img src="Caldera_landing.webp" class="img-fluid" class="img-fluid" shadow-1-strong
+                                    rounded loading="lazy" mb-4 style="width: 100%; "
+                                    alt="Snapshot of Caldera login/landing page" /><br></br>
+                            </div>
+                            <div class="Version control of HCL file using GitHub and branches off main Terraform file">
+
+                                <h2 class="display-6">Using GitHub as Version Control for the HCL File
+                                </h2>
+
+                                <p class="lead">I have made a private repository on GitHub for version control of my HCL
+                                    files. When I register a phishing domain, that domain gets its own folder on my
+                                    machine,
+                                    I then create a branch from the main "red-team-infrastructure"
+                                    repository on GitHub, and assign that branch the name of the newly registered
+                                    domain. In
+                                    this way, I have a corresponding branch that contains a modified HCL file for each
+                                    domain that I register, and the main branch of
+                                    the red-team-infrastructure repository contains the original HCL file with default
+                                    values, ready for configuration and branching according to my needs.
+                                </p>
+                                <img src="red-team-infrastructure-repo-overview.webp" class="img-fluid"
+                                    class="img-fluid" loading="lazy" shadow-1-strong rounded mb-4 style="width: 100%;"
+                                    alt="Snapshot of GitHub repo" /><br></br>
+                            </div>
+                    </section>
+                    <!--Section: Share buttons-->
+                    <section class="text-center border-top border-bottom py-4 mb-4">
+                        <p><strong>Share with your network</strong></p>
+                        <a href="https://twitter.com" class="btn btn-primary m-1" role="button" target="_blank"
+                            rel="noopener">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" class="btn btn-primary m-1" role="button" target="_blank"
+                            rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </section>
+                    <!--Section: Share buttons-->
+
+                    <!--Section: Author-->
+                    <section class="border-bottom mb-4 pb-4">
+                        <div class="row">
+                            <div class="col-3">
+                               <!---- <img src="IMG-9879-copy-2.webp" loading="lazy" class="img-fluid shadow-1-strong rounded"
+                                    alt="Author" />
+                            </div>-->
+
+                           <!---- <div class="col-9">-->
+                            <section class="text-left border-top border-bottom py-4 mb-4">
+                                <p class="mb-2"><strong>Grant Knoetze</strong></p>
+                                <p>
+                                    IT Support Specialist Cybersecurity Analyst Software Developer
+                                </p>
+                            </div></section>
+                    <!--Section: Author-->
+
+ 
+
+                
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-4">
+                    <!--Section: Sidebar-->
+                    <section class="sticky-top" style="top: 80px;">
+                    </section>
+                    <!--Section: Ad-->
+                    <section class="text-center border-bottom pb-4 mb-4">
+                        <div class="bg-image hover-overlay ripple mb-4">
+                            <!---- <img src="" class="img-fluid" />-->
+                            <a href="https://github.com/Grant-Knoetze/c--red-team-code" target="_blank" rel="noopener">
+                                <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+                            </a>
+                        </div>
+                        <h3>Useful Code for Red Teaming</h3>
+                        <p class="lead"> This is code that I wrote to help me with red teaming, and includes a step by step
+                            how-to on developing a fully undetectable trojan. Disclaimer - Nothing
+                            on this page is intended for malicious purposes, anything that you do with any code is
+                            <em>your own
+                                responsibility</em>, <b>never engage a target without written permission in the form of
+                                    a signed contract.</b>
+                        </p>
+                        <a href="https://github.com/Grant-Knoetze/c--red-team-code" class="btn btn-primary m-1"
+                            role="button" rel="nofollow" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://github.com/Grant-Knoetze/step-by-step-trojan" class="btn btn-primary m-1"
+                            role="button" rel="nofollow" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </section>
+                    <!--Section: Sidebar-->
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+    </main>
+    <!--Main layout-->
+    <!--Contact Form-->
+    
+    <!--Contact Form End-->
+<!-- Contact Form Section -->
+<section class="border-bottom mb-4">
+    <h2 class="display-6">Contact Me</h2>
+    <p class="lead">If you have any questions or would like to get in touch, please fill out the form below.</p>
+    
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+<!-- End Contact Form Section -->
+    <!--Footer-->
+    <footer class="bg-light text-lg-start">
+        <hr class="m-0" />
+
+        <div class="text-center py-4 align-items-center">
+            <p>Follow me on social media</p>
+            <a href="https://twitter.com/KnoetzeGrant" class="btn btn-primary m-1" role="button" rel="nofollow"
+                target="_blank" rel="noopener">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/Grant-Knoetze" class="btn btn-primary m-1" role="button" rel="nofollow"
+                target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/grant-knoetze-563b0b1b6/" class="btn btn-primary m-1" role="button"
+                rel="nofollow" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2025 Copyright: Grant Knoetze
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!--Footer-->
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+        <!-- Google Tag Manager -->
+        <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=FyAvnV26jgbcxptBeyJ0P1rB6D8Gp4pcXgqZAmh1c9gh8ZhfdxA4DafLZmI1xkzHmm3zxtFCJeLRHK96tqGvfmaywWn3Kty6w0MV4C805MMkGIRUnrIGrRIim13trBSPPfGPzRmeaVnCnntOIY7BHbdR36EVWuuLYGySkYSKiVtwdrU5jEZtgQh_uWXM6x8y"
+        charset="UTF-8"></script>
+    <link rel="stylesheet" crossorigin="anonymous"
+        href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9nYXJnb3lsZS5hc2Vydi5jby56YToyMDgzL2Nwc2VzczYxNDg3OTM3NzMvZG93bmxvYWQ_c2tpcGVuY29kZT0xJmZpbGU9JTJmaG9tZSUyZmdyYW50Y2NiJTJmcHVibGljX2h0bWwlMmZpbmRleC5odG1s" />
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K4QRS88');
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FETHGQJWZF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FETHGQJWZF');
+</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4QRS88" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ <!--Core Web Vitals-->
+ <script type="module">
+    import {onCLS, onINP, onLCP} from 'https://unpkg.com/web-vitals@4?module';
+    function sendToGoogleAnalytics({name, delta, id}) {
+  // Assumes the global `gtag()` function exists, see:
+  // https://developers.google.com/analytics/devguides/collection/gtagjs
+  gtag('event', name, {
+    event_category: 'Web Vitals',
+    // Google Analytics metrics must be integers, so the value is rounded.
+    // For CLS the value is first multiplied by 1000 for greater precision
+    // (note: increase the multiplier for greater precision if needed).
+    value: Math.round(name === 'CLS' ? delta * 1000 : delta),
+    // The `id` value will be unique to the current page load. When sending
+    // multiple values from the same page (e.g. for CLS), Google Analytics can
+    // compute a total by grouping on this ID (note: requires `eventLabel` to
+    // be a dimension in your report).
+    event_label: id,
+    // Use a non-interaction event to avoid affecting bounce rate.
+    non_interaction: true,
+  });
+}
+
+onCLS(sendToGoogleAnalytics);
+onINP(sendToGoogleAnalytics);
+onLCP(sendToGoogleAnalytics);
+    onCLS(console.log);
+    onINP(console.log);
+    onLCP(console.log);
+  </script>
+  <!--Core Web Vitals End-->
+</body>
+
+</html>
