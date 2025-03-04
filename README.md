@@ -1,1 +1,1 @@
-This is a modified version of my blog for the Mindrift Cybersecurity Analyst technical assessment.
+This is a modified version of my blog www.grantknoetze.com for the Mindrift Cybersecurity Analyst technical assessment.
